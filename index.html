@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        font-family: "Martel Sans", sans-serif;
+      }
+      .mainbox {
+        background-image: url(img/mainbg.jpg);
+        background-position: center center;
+        background-size: max(1200px, 100vw) 720px;
+        background-repeat: no-repeat;
+        height: 720px;
+        position: relative;
+      }
+      .mainbox .box {
+        height: 100%;
+        width: 100%;
+
+        filter: opacity(0.7);
+        position: absolute;
+        top: 0;
+        background-color: black;
+      }
+      nav {
+        max-width: 1074px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        height: 80px;
+      }
+      .logo {
+        top: 9px;
+        position: relative;
+        z-index: 16;
+        width: 190px;
+        filter: contrast(120%);
+        color: rgb(255, 0, 0);
+      }
+      nav button {
+        position: relative;
+        z-index: 16;
+        top: 5px;
+        right: 23px;
+      }
+      .hero {
+        font-family: "Martel Sans", sans-serif;
+        height: calc(100% - 80px);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        line-height: 60px;
+        padding: 0 30px;
+      }
+      .ch1 {
+        font-weight: 900;
+        font-size: 44px;
+        text-align: center;
+      }
+      .ch2 {
+        font-weight: 500;
+        font-size: 23px;
+        text-align: center;
+      }
+      .ch3 {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+      }
+      .butt {
+        width: 200px;
+        height: 58px;
+        background-color: rgb(211, 15, 15);
+        font-size: 20px;
+        border-radius: 5px;
+        color: white;
+        font-family: "Martel Sans", sans-serif;
+        padding: 3px, 23px;
+        font-weight: 900;
+        border: none;
+        padding-top: 9px;
+      }
+
+      .email {
+        width: 350px;
+        height: 50px;
+        background-color: rgba(23, 23, 23, 0.4);
+        border: 0.4px solid rgba(255, 255, 255, 0.281);
+        border-radius: 5px;
+        font-size: large;
+        margin-right: 5px;
+        color: white;
+        padding-top: 5px;
+      }
+      .english {
+        height: 33px;
+        width: 120px;
+        border-radius: 5px;
+        font-family: "Martel Sans", sans-serif;
+        background-color: rgba(23, 23, 23, 0.8);
+        color: white;
+        border: none;
+        font-weight: bold;
+        right: 43px;
+        border: gray solid 0.5px;
+        padding-top: 5px;
+        cursor: pointer;
+      }
+      .sign {
+        background-color: rgb(211, 15, 15);
+        color: white;
+        height: 33px;
+        width: 80px;
+        border-radius: 5px;
+        font-family: "Martel Sans", sans-serif;
+        border: none;
+        font-weight: bold;
+        padding-top: 5px;
+      }
+      .sepration {
+        height: 8px;
+        background-color: rgba(128, 128, 128, 0.39);
+      }
+      .secx {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 76vw;
+        margin: 72px auto;
+
+      }
+
+      .secIMG{
+        position: relative;
+      }
+      .secximg {
+        width: 485px;
+        position: relative;
+        z-index: 10;
+      }
+      .secxvid {
+        position: absolute;
+        right: 67px;
+        top: 80px;
+        width: 405px;
+      }
+      .vid2 {
+        position: absolute;
+        right: 95px;
+        top: 45px;
+        width: 310px;
+      }
+      .secx2 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        margin: 100px 200px;
+        height: 1000px;
+      }
+      .tex {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+      .tex1 {
+        font-size: 44px;
+        font-weight: 999;
+        line-height: 1.4;
+        padding-bottom: 10px;
+      }
+      .tex2 {
+        font-size: 23px;
+        font-weight: 550;
+        line-height: 1.4;
+      }
+ 
+      .faq {
+        color: white;
+        padding-top: 24px;
+      }
+      .faq h2 {
+        text-align: center;
+        font-size: 45px;
+        font-weight: 999;
+        margin-bottom: 0;
+      }
+      .Fbox:hover{
+        background-color:  rgba(128, 128, 128, 0.568);
+      }
+      .Fbox {
+        background-color: rgba(128, 128, 128, 0.342);
+        display: flex;
+        justify-content: space-between;
+        padding: 26px 25px 14px 25px;
+        max-width: 72vw;
+        margin: 8px auto;
+        font-size: x-large;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .Fbox svg {
+        filter: invert(100%);
+      }
+      .end {
+        text-align: center;
+        color: white;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+      .sepration2{
+        margin-top: 60px;
+        margin-bottom: 55px;
+      }
+      .foot{
+        color: rgba(255, 255, 255, 0.726);
+        max-width: 60vw;
+        margin: 10px auto 10px 11.5vw ; 
+        /* 160px */
+        margin-bottom: 65px;
+      }
+      .call{
+        text-decoration: underline;
+      }
+      .details{
+        text-decoration: underline;
+        width: 71vw;
+        height:160px ;
+        padding-top: 17px;
+        font-size: 14px;
+      }
+      .english2{
+        margin-top: 18px;
+        margin-bottom: 15px
+      }
+      .netflix{
+        font-size: 13px;
+      }
+      @media screen and (max-width:1050px){
+        .secx{
+          flex-wrap: wrap;
+        }
+      }
+      @media screen and (max-width:1050px){
+        .secximg{
+          width: 300px;
+        }
+        .secxvid{
+          width: 220px;
+          top:40px ;
+          right: 40px;
+        }
+        .vid2{
+          width: 200px;
+        }
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="mainbox">
+      <nav>
+        <span
+          ><img width="53" src="img/Netflix_Logo_PMS.png" class="logo"
+        /></span>
+        <span>
+          <button class="english">English</button>
+          <button class="sign">Sign-In</button>
+        </span>
+      </nav>
+      <div class="box"></div>
+      <div class="hero">
+        <span class="ch1">Unlimited movies, TV shows and more</span>
+        <span class="ch2">Watch anywhere. Cancel anytime.</span>
+        <span class="ch3"
+          >Ready to watch? Enter your email to create or restart your
+          membership.</span
+        >
+        <span class="ch4">
+          <input type="text" placeholder="Email-Address" class="email" />
+          <button class="butt">Get Started &nbsp;&nbsp; ></button>
+        </span>
+      </div>
+      <div class="sepration"></div>
+    </div>
+
+    <section class="secx">
+      <div class="tex">
+        <span class="tex1"> Enjoy on your TV </span>
+        <span class="tex2">
+          Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+          players and more.</span
+        >
+      </div>
+      <div class="secIMG">
+        <img src="./img/tv.png" alt="" class="secximg" />
+        <video
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+          class="secxvid"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+    </section>
+    <div class="sepration"></div>
+
+    <section class="secx">
+      <div>
+        <img src="./img/mobile-0819.jpg" alt="" class="secximg" />
+      </div>
+      <div class="tex">
+        <span class="tex1">Download your shows to watch offline</span>
+        <span class="tex2"
+          >Save your favourites easily and always have something to watch.</span
+        >
+      </div>
+    </section>
+    <div class="sepration"></div>
+
+    <section class="secx">
+      <div class="tex">
+        <span class="tex1">Watch everywhere</span>
+        <span class="tex2"
+          >Stream unlimited movies and TV shows on your phone, tablet, laptop,
+          and TV.</span
+        >
+      </div>
+      <div class="secIMG">
+        <img src="./img/device-pile.png" alt="" class="secximg" />
+        <video
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+          class="vid2"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+    </section>
+    <div class="sepration"></div>
+
+    <section class="secx">
+      <div>
+        <img src="./img/kids.png" alt="" class="secximg" />
+      </div>
+      <div class="tex">
+        <span class="tex1"> Create profiles for kids </span>
+        <span class="tex2">
+          Send children on adventures with their favourite characters in a space
+          made just for them—free with your membership.</span
+        >
+      </div>
+    </section>
+    <div class="sepration"></div>
+    <section class="faq">
+      <h2>Frequently asked questions</h2>
+
+      <div class="Fbox">
+        <span>What is Netflix ? </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+          color="#000000"
+          fill="none"
+        >
+          <path
+            d="M12 4V20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div class="Fbox">
+        <span>Is Netflix good for kids? </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+          color="#000000"
+          fill="none"
+        >
+          <path
+            d="M12 4V20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div class="Fbox">
+        <span>How much does Netflix costs ? </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+          color="#000000"
+          fill="none"
+        >
+          <path
+            d="M12 4V20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div class="Fbox">
+        <span>Where can I watch ? </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+          color="#000000"
+          fill="none"
+        >
+          <path
+            d="M12 4V20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div class="Fbox">
+        <span>How do I cancel ? </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+          color="#000000"
+          fill="none"
+        >
+          <path
+            d="M12 4V20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div class="Fbox">
+        <span>What can i watch on Netflix? </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+          color="#000000"
+          fill="none"
+        >
+          <path
+            d="M12 4V20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <h3 class="end">
+        Ready to watch? Enter your email to create or restart your membership.
+      </h3>
+      <div class="hero">
+        <span class="ch4">
+          <input type="text" placeholder="Email-Address" class="email" />
+          <button class="butt">Get Started &nbsp;&nbsp; ></button>
+        </span>
+      </div>
+    </section>
+    <div class="sepration sepration2"></div>
+
+    <footer class="foot">
+      <span class="question">Questions? <span class="call"> Call 000-800-919-1694</span></span>
+        <table class="details">
+          <tr>
+            <td>FAQ</td>
+            <td>Help Center</td>
+            <td>Account</td>
+            <td>Media center</td>
+          </tr>
+          <tr>
+            <td>Investor Relations</td>
+            <td>Jobs</td>
+            <td>Ways to Watch</td>
+            <td>Terms of Use</td>
+          </tr>
+          <tr>
+            <td>Privacy</td>
+            <td>Cookie Preferences</td>
+            <td>Corporate Information</td>
+            <td>Contact Us</td>
+          </tr>
+          <tr>
+            <td>Speed Test</td>
+            <td>Legal Notices</td>
+            <td>Only on Netflix</td>
+          </tr>
+      </table>
+      <button class="english english2">English</button> <br>
+      <span class="netflix">Netflix India</span>
+    </footer>
+  </body>
+</html>
